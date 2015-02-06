@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Lobster';
+  src: url("../fonts/Lobster.otf"); }
+
+/*Global Elements*/
+/* line 92, scss/style.scss */
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 95, scss/style.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #eff4ff; }
+
+/* line 99, scss/style.scss */
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -ms-transition: color 200ms linear;
+  transition: color 200ms linear;
+  font: inherit; }
+
+/* line 105, scss/style.scss */
+a:hover {
+  color: #51bdff;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -ms-transition: color 200ms linear;
+  transition: color 200ms linear; }
+
+/* line 109, scss/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-family: "Raleway", sans-serif; }
+
+/* line 113, scss/style.scss */
+::selection {
+  background: #24890d;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 119, scss/style.scss */
+::-moz-selection {
+  background: #24890d;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 124, scss/style.scss */
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 100%; }
+
+/*-------------------------------------
+Index or Home Page Template
+---------------------------------------*/
+/* line 131, scss/style.scss */
+.page-wrapper {
+  width: 960px;
+  overflow: hidden;
+  margin: 0 auto; }
+  @media (min-width: 64.375em) {
+    /* line 131, scss/style.scss */
+    .page-wrapper {
+      width: 960px; } }
+
+/*-------------------------------------
+Navigation Menu Template
+---------------------------------------*/
+/* line 140, scss/style.scss */
+.top-header {
+  width: 100%;
+  overflow: hidden;
+  background: #333; }
+
+/* line 146, scss/style.scss */
+.top-header ul {
+  width: 100%;
+  display: block;
+  list-style: none;
+  background: transparent;
+  overflow: hidden;
+  margin: 0;
+  padding-left: 0; }
+/* line 155, scss/style.scss */
+.top-header li {
+  display: inline-block;
+  margin: 0;
+  float: left; }
+/* line 161, scss/style.scss */
+.top-header li a {
+  display: block;
+  margin-left: 0;
+  margin-right: 1.62em;
+  padding: 20px 20px 20px 0;
+  font-family: "Montserrat", sans-serif;
+  color: #f2f2f2; }
+/* line 169, scss/style.scss */
+.top-header li a:hover {
+  color: #51bdff; }
+
+/* line 173, scss/style.scss */
+.logo-link {
+  display: block;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.96em;
+  color: #f2f2f2;
+  float: left;
+  border-right: 0;
+  clear: both;
+  padding-top: 1.62em; }
+
+/* line 184, scss/style.scss */
+.logo-link:hover {
+  background: none;
+  text-decoration: none; }
+
+/* line 188, scss/style.scss */
+.logo-desc {
+  color: white;
+  float: left;
+  clear: left;
+  margin: 0;
+  padding-bottom: 1.62em; }

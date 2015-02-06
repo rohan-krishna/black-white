@@ -1,0 +1,450 @@
+//Global Styles
+$font-stack : Helvetica Neue,sans-serif;
+$primary-color : #fff;
+$hover-color :  #51bdff;
+$header-font : 'Raleway',sans-serif;
+$header-color : #333;
+$primary-font: 'Source Sans Pro', sans-serif;
+$logo-font: 'Montserrat', sans-serif;
+$para-color: #333;
+$box-border : #e5e6e9 #dfe0e4 #d0d1d5;
+$primary-a-color: #237dac;
+
+@font-face {
+	font-family: 'Lobster';
+	src: url('../fonts/Lobster.otf');
+}
+
+//Clearfix Mixin
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+//---------------------------
+//-------Mixins Library------
+//---------------------------
+
+
+//Breakpoints
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 37.5em)  { @content; }
+  }
+}
+
+//Retina Mixin
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+//Transition Mixins
+@mixin transition($property,$time) {
+	-webkit-transition: $property $time linear;
+	   -moz-transition: $property $time linear;
+	    -ms-transition: $property $time linear;
+			transition: $property $time linear;
+}
+
+//Box Sizing Mixin
+@mixin box-sizing($box) {
+	
+	-webkit-box-sizing: $box; // Safari <= 5
+     -moz-box-sizing: $box; // Firefox <= 19
+          box-sizing: $box;
+}
+
+//Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+//Box Shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+//Center Align Block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//------------------
+//Body
+/*Global Elements*/
+
+$bodyBackground: #fffafd;
+
+*:after,
+*:before {
+	@include box-sizing(border-box);
+}
+body {
+	-webkit-font-smoothing : antialiased;
+	background: $bodyBackground;
+}
+a {
+	color : $primary-a-color;
+	text-decoration : none;
+	@include transition(color,200ms);
+	font: inherit;
+	overflow: hidden;
+}
+a:hover {
+	color : $hover-color;
+	@include transition(color,200ms);
+	text-decoration: none;
+}
+a:active {
+	position: relative;
+	bottom: -1px;
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	color : $header-color;
+	font-family : $header-font;
+	margin: 0;
+}
+::selection {
+	background: #24890d;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #24890d;
+	color: #fff;
+	text-shadow: none;
+}
+p {
+	font-family: $primary-font;
+	font-size: 16px;
+	color: $para-color;
+}
+figure {
+	margin:0;
+}
+blockquote {
+	background: #f9f9f9;
+	border-left: 6px solid #ccc;
+	margin: 1.52em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019"; 
+}
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
+}
+.divider {
+	max-width: 75%;
+	height: 1px;
+	background: #d4d4d4;
+	margin: 1.62% auto;
+}
+.text-center {
+	text-align: center;
+}
+.btn-more {
+	border: 2px solid #eee;
+	margin-top: 1.52em;
+}
+.btn-more:hover {
+	border-color: #00B057;
+	color: #fff;
+}
+/*-------------------------------------
+Index or Home Page Template
+---------------------------------------*/
+.page-wrapper {
+	width : 960px;
+	@include breakpoint(large) { width : 960px; };
+	overflow: hidden;
+	margin: 0 auto;
+}
+.head-logo {
+	overflow: hidden;
+}
+.head-search {
+	float: right;
+	color: #fff;
+	width: 250px;
+	position: relative;
+	display: inline-block;
+	top: -2.52em;
+}
+/*-------------------------------------
+Navigation Menu Template
+---------------------------------------*/
+.top-header {
+	max-width: 100%;
+	overflow: hidden;
+	background: #333;
+}
+.top-header {
+	ul {
+		width: 100%;
+		display: block;
+		list-style: none;
+		background: transparent;
+		overflow: hidden;
+		margin: 0;
+		padding-left: 0;
+	}
+	li { 
+		display: inline-block;
+		margin: 0;
+		float: left;
+	}
+	
+	li a { 
+		display: block; 
+		margin-left:0;
+		margin-right: 1.62em;
+		padding: 20px 20px 20px 0;
+		font-family: $logo-font;
+		color: #f2f2f2;
+	}
+	li a:hover {
+		color: $hover-color;
+		text-decoration: none;
+	}
+}
+.logo-link {
+		display: block;
+		background: transparent;
+		font-family:  $logo-font;
+		font-size: 2.96em;
+		color: #f2f2f2;
+		float: left;
+		border-right: 0;
+		clear: both;
+		padding-top: 1.62em;
+	}
+.logo-link:hover {
+		background: none;
+		text-decoration: none;
+	}
+.logo-desc {
+		color: $primary-color;
+		float: left;
+		clear: left;
+		margin: 0;
+		padding-bottom: 1.62em;
+	}
+/*--------------------------------
+      SearchForm Template
+--------------------------------*/
+
+.searchform {
+
+}
+.searchform input[type="text"] {
+	border: 0;
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	color: #333;
+	font-size: 18px;
+	border-radius: 3px 0 0 3px;
+}
+
+/*--------------------------------
+      PostWrapper Template
+--------------------------------*/
+
+.post-wrapper {
+	display: block;
+	overflow: hidden;
+	margin: 1.62em 1.62em 1.62em 0;
+	background: #fff;
+	border: 1px solid;
+	border-color: $box-border;
+	border-radius: 2px;
+	box-sizing: border-box;	
+}
+.post-wrapper figure {
+	float: left;
+	margin: 0 1.62em 0 0;
+}
+.post-wrapper figure img {
+	max-width: 256px;
+	max-height: 256px;
+}
+.post-wrapper .read-more {
+
+}
+.post-wrapper a {
+	color: #333;
+}
+.post-wrapper a:hover {
+	color: $hover-color;
+}
+/*--------------------------------
+      SideBar Template
+--------------------------------*/
+.sidebar {
+	display: block;
+	overflow: hidden;
+	margin: 1.62em 1.62em 1.62em 0;
+	background: #fff;
+	border-radius: 2px;
+	border: 1px solid #d8d8d8;
+	box-sizing: border-box;
+	padding: 1.52em;
+}
+.sidebar ul,li {
+	list-style: none;
+	margin:0;
+}
+.sidebar a {
+	color: $para-color;
+}
+/*--------------------------------
+      Twitter Feed Template
+--------------------------------*/
+.twitter-feed {
+	margin: 1.62em 0;
+	background: #fff;
+	padding-left: 0;
+	box-sizing: border-box;
+	border-radius: 2px;
+	border: 1px solid #d8d8d8;
+}
+figure.twitter-logo {
+	width: 128px;
+	height: 128px;
+	margin: 0;
+	float: left;
+	background: #00b0ed url('https://g.twimg.com/Twitter_logo_white.png') no-repeat;
+	background-size: 50%;
+	background-position: center center;
+}
+/*--------------------------------
+      Footer Template
+--------------------------------*/
+.footer-wrapper {
+	width: 100%;
+	background: transparent;
+	position: relative;
+	bottom:0;
+	left: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.footer-divider {
+	min-height: 35px;
+	width: 100%;
+	overflow: hidden;
+	background: #333;
+	padding: 1.62em;
+	text-align: center;
+}
+.footer-content {
+	background: #000;
+}
+.footer-content p {
+	margin: 0;
+}
+/*--------------------------------
+      Single Page Template
+--------------------------------*/
+.thumbnail-wrapper {
+	margin: 1.62em auto;
+	float: left;
+}
+.post-thumbnail {
+	margin: 0;
+}
+.single-title {
+	padding: 5px;
+	margin-top: 1.62em;
+}
+.single-title h1 {
+	font-family: $logo-font;
+}
+.single-meta {
+	float: left;
+	overflow: hidden;
+	clear: left;
+	font-family: $logo-font;
+}
+.single-meta a {
+	color: #000;
+}
+.single-meta a:hover {
+	color: $hover-color; 
+}
+.single-post-entry {
+	-webkit-text-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+}
+.single-post-entry h1,h2,h3,h4 {
+	line-height: 100%;
+}
+.single-post-related {
+	overflow: hidden;
+}
+.single-author-card {
+	overflow: hidden;
+	width: 100%;
+	background: #fff;
+	border: 1px solid;
+	border-color: $box-border;
+	border-radius: 4px;
+	padding: 1.62em;
+}
+/*--------------------------------
+      Category Page Template
+--------------------------------*/
+.cat-info {
+	background: #fff;
+	overflow: hidden;
+	padding: 1.52em;
+	margin: 1.62em 0;
+	border: 1px solid #eee;
+	border-radius: 2px;
+	@include box-shadow(1px,2px,2px,#eee);
+}
