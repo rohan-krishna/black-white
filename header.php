@@ -21,7 +21,6 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="<?php echo get_stylesheet_directory_uri() ?>/css/bootstrap.min.css" rel="stylesheet">
 
 <!--Script Tags!-->
 
@@ -30,7 +29,8 @@
 
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> class="test-bg">
+<?php /* Archived Header Design 
 <header class="top-header" id="topHeader">
 	<div class="container">
 		<section class="head-logo">
@@ -45,3 +45,4 @@
 		<?php wp_nav_menu(array('theme_location' => 'header','container' => false,'echo' => true)); ?>
 	</div>	
 </header>
+*/ ?>

@@ -3,62 +3,73 @@
   font-family: 'Lobster';
   src: url("../fonts/Lobster.otf"); }
 /*Global Elements*/
+/* line 113, style.scss */
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* line 117, style.scss */
 body {
   -webkit-font-smoothing: antialiased;
   background: #fffafd; }
 
+/* line 121, style.scss */
 a {
   color: #237dac;
   text-decoration: none;
   -webkit-transition: color 200ms linear;
-  -moz-transition: color 200ms linear;
-  -ms-transition: color 200ms linear;
   transition: color 200ms linear;
   font: inherit;
   overflow: hidden; }
 
+/* line 128, style.scss */
 a:hover {
   color: #51bdff;
   -webkit-transition: color 200ms linear;
-  -moz-transition: color 200ms linear;
-  -ms-transition: color 200ms linear;
   transition: color 200ms linear;
   text-decoration: none; }
 
+/* line 133, style.scss */
 a:active {
   position: relative;
   bottom: -1px;
   text-decoration: none; }
 
+/* line 138, style.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   font-family: "Raleway", sans-serif;
   margin: 0; }
 
+/* line 143, style.scss */
+::-moz-selection {
+  background: #24890d;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: color 100ms linear; }
 ::selection {
   background: #24890d;
   color: #fff;
-  text-shadow: none; }
+  text-shadow: none;
+  -webkit-transition: color 100ms linear; }
 
+/* line 150, style.scss */
 ::-moz-selection {
   background: #24890d;
   color: #fff;
   text-shadow: none; }
 
+/* line 155, style.scss */
 p {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   color: #333; }
 
+/* line 160, style.scss */
 figure {
   margin: 0; }
 
+/* line 163, style.scss */
 blockquote {
   background: #f9f9f9;
   border-left: 6px solid #ccc;
@@ -66,6 +77,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "“" "”" "‘" "’"; }
 
+/* line 170, style.scss */
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -74,40 +86,70 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em; }
 
+/* line 178, style.scss */
 blockquote p {
   display: inline; }
 
+/* line 181, style.scss */
+input {
+  position: relative;
+  outline: none;
+  z-index: 1;
+  display: inline-block;
+  border: 0; }
+
+/* line 188, style.scss */
 .divider {
   max-width: 75%;
   height: 1px;
   background: #d4d4d4;
   margin: 1.62% auto; }
 
+/* line 194, style.scss */
 .text-center {
   text-align: center; }
 
+/* line 197, style.scss */
 .btn-more {
   border: 2px solid #eee;
   margin-top: 1.52em; }
 
+/* line 201, style.scss */
 .btn-more:hover {
   border-color: #00B057;
   color: #fff; }
 
+/* line 205, style.scss */
+.margin-top-162 {
+  margin-top: 1.62em; }
+
+/* line 208, style.scss */
+.margin-top-364 {
+  margin-top: 3.64em; }
+
+/* line 211, style.scss */
+.test-bg {
+  background: url("../../images/bg-1.jpg") center center;
+  background-size: cover; }
+
 /*-------------------------------------
 Index or Home Page Template
 ---------------------------------------*/
+/* line 218, style.scss */
 .page-wrapper {
   width: 960px;
   overflow: hidden;
   margin: 0 auto; }
   @media (min-width: 64.375em) {
+    /* line 218, style.scss */
     .page-wrapper {
       width: 960px; } }
 
+/* line 224, style.scss */
 .head-logo {
   overflow: hidden; }
 
+/* line 227, style.scss */
 .head-search {
   float: right;
   color: #fff;
@@ -119,11 +161,13 @@ Index or Home Page Template
 /*-------------------------------------
 Navigation Menu Template
 ---------------------------------------*/
+/* line 238, style.scss */
 .top-header {
   max-width: 100%;
   overflow: hidden;
   background: #333; }
 
+/* line 244, style.scss */
 .top-header ul {
   width: 100%;
   display: block;
@@ -132,10 +176,12 @@ Navigation Menu Template
   overflow: hidden;
   margin: 0;
   padding-left: 0; }
+/* line 253, style.scss */
 .top-header li {
   display: inline-block;
   margin: 0;
   float: left; }
+/* line 259, style.scss */
 .top-header li a {
   display: block;
   margin-left: 0;
@@ -143,10 +189,12 @@ Navigation Menu Template
   padding: 20px 20px 20px 0;
   font-family: "Montserrat", sans-serif;
   color: #f2f2f2; }
+/* line 267, style.scss */
 .top-header li a:hover {
   color: #51bdff;
   text-decoration: none; }
 
+/* line 272, style.scss */
 .logo-link {
   display: block;
   background: transparent;
@@ -158,10 +206,12 @@ Navigation Menu Template
   clear: both;
   padding-top: 1.62em; }
 
+/* line 283, style.scss */
 .logo-link:hover {
   background: none;
   text-decoration: none; }
 
+/* line 287, style.scss */
 .logo-desc {
   color: #fff;
   float: left;
@@ -172,6 +222,7 @@ Navigation Menu Template
 /*--------------------------------
       SearchForm Template
 --------------------------------*/
+/* line 301, style.scss */
 .searchform input[type="text"] {
   border: 0;
   position: relative;
@@ -185,6 +236,7 @@ Navigation Menu Template
 /*--------------------------------
       PostWrapper Template
 --------------------------------*/
+/* line 316, style.scss */
 .post-wrapper {
   display: block;
   overflow: hidden;
@@ -195,23 +247,28 @@ Navigation Menu Template
   border-radius: 2px;
   box-sizing: border-box; }
 
+/* line 326, style.scss */
 .post-wrapper figure {
   float: left;
   margin: 0 1.62em 0 0; }
 
+/* line 330, style.scss */
 .post-wrapper figure img {
   max-width: 256px;
   max-height: 256px; }
 
+/* line 337, style.scss */
 .post-wrapper a {
   color: #333; }
 
+/* line 340, style.scss */
 .post-wrapper a:hover {
   color: #51bdff; }
 
 /*--------------------------------
       SideBar Template
 --------------------------------*/
+/* line 346, style.scss */
 .sidebar {
   display: block;
   overflow: hidden;
@@ -222,16 +279,19 @@ Navigation Menu Template
   box-sizing: border-box;
   padding: 1.52em; }
 
+/* line 356, style.scss */
 .sidebar ul, li {
   list-style: none;
   margin: 0; }
 
+/* line 360, style.scss */
 .sidebar a {
   color: #333; }
 
 /*--------------------------------
       Twitter Feed Template
 --------------------------------*/
+/* line 366, style.scss */
 .twitter-feed {
   margin: 1.62em 0;
   background: #fff;
@@ -240,6 +300,7 @@ Navigation Menu Template
   border-radius: 2px;
   border: 1px solid #d8d8d8; }
 
+/* line 374, style.scss */
 figure.twitter-logo {
   width: 128px;
   height: 128px;
@@ -252,6 +313,7 @@ figure.twitter-logo {
 /*--------------------------------
       Footer Template
 --------------------------------*/
+/* line 386, style.scss */
 .footer-wrapper {
   width: 100%;
   background: transparent;
@@ -261,6 +323,7 @@ figure.twitter-logo {
   box-sizing: border-box;
   overflow: hidden; }
 
+/* line 395, style.scss */
 .footer-divider {
   min-height: 35px;
   width: 100%;
@@ -269,51 +332,64 @@ figure.twitter-logo {
   padding: 1.62em;
   text-align: center; }
 
+/* line 403, style.scss */
 .footer-content {
   background: #000; }
 
+/* line 406, style.scss */
 .footer-content p {
   margin: 0; }
 
 /*--------------------------------
       Single Page Template
 --------------------------------*/
+/* line 412, style.scss */
 .thumbnail-wrapper {
   margin: 1.62em auto;
   float: left; }
 
+/* line 416, style.scss */
 .post-thumbnail {
   margin: 0; }
 
+/* line 419, style.scss */
 .single-title {
   padding: 5px;
   margin-top: 1.62em; }
 
+/* line 423, style.scss */
 .single-title h1 {
   font-family: "Montserrat", sans-serif; }
 
+/* line 426, style.scss */
 .single-meta {
   float: left;
   overflow: hidden;
   clear: left;
   font-family: "Montserrat", sans-serif; }
 
+/* line 432, style.scss */
 .single-meta a {
   color: #000; }
 
+/* line 435, style.scss */
 .single-meta a:hover {
   color: #51bdff; }
 
+/* line 438, style.scss */
 .single-post-entry {
   -webkit-text-smoothing: antialiased;
   text-rendering: optimizeSpeed; }
 
+/* line 442, style.scss */
 .single-post-entry h1, h2, h3, h4 {
   line-height: 100%; }
 
+/* line 445, style.scss */
 .single-post-related {
   overflow: hidden; }
 
+/* line 448, style.scss */
 .single-author-card {
   overflow: hidden;
   width: 100%;
@@ -326,6 +402,7 @@ figure.twitter-logo {
 /*--------------------------------
       Category Page Template
 --------------------------------*/
+/* line 460, style.scss */
 .cat-info {
   background: #fff;
   overflow: hidden;
@@ -333,8 +410,217 @@ figure.twitter-logo {
   margin: 1.62em 0;
   border: 1px solid #eee;
   border-radius: 2px;
-  -webkit-box-shadow: 1px 2px 2px #eee;
-  -moz-box-shadow: 1px 2px 2px #eee;
   box-shadow: 1px 2px 2px #eee; }
+
+/*--------------------------------
+      Coming Soon Template
+--------------------------------*/
+/* line 472, style.scss */
+.cs-logo-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  overflow: hidden; }
+
+/* line 481, style.scss */
+.cs-logo-wrapper h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 4.86em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
+  text-shadow: 1px 1px 1px #ddd,  3px 3px 5px #eee;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #e74c3c; }
+
+/* line 494, style.scss */
+.cs-logo-wrapper p {
+  margin: 0 0 0 0; }
+
+/*------- Input Tweaks -------*/
+/* line 499, style.scss */
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none
+  /* for box shadows to show on iOS */ }
+
+/* line 514, style.scss */
+.input__field:focus {
+  outline: none; }
+
+/* line 518, style.scss */
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 534, style.scss */
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%; }
+
+/* line 541, style.scss */
+.input {
+  position: relative;
+  z-index: 1;
+  outline: none;
+  border: 0; }
+
+/* line 547, style.scss */
+.input__field--minoru {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px transparent;
+  color: #eca29b;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s; }
+
+/* line 556, style.scss */
+.input__label--minoru {
+  padding: 0;
+  width: 100%;
+  text-align: left; }
+
+/* line 562, style.scss */
+.input__label--minoru::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 4em;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(199, 152, 157, 0.6); }
+
+/* line 573, style.scss */
+.input__field--minoru:focus {
+  box-shadow: 0px 0px 0px 2px #eca29b; }
+
+/* line 577, style.scss */
+.input__field--minoru:focus + .input__label--minoru {
+  pointer-events: none; }
+
+/* line 581, style.scss */
+.input__field--minoru:focus + .input__label--minoru::after {
+  -webkit-animation: anim-shadow 0.3s forwards;
+  animation: anim-shadow 0.3s forwards; }
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 100px 50px;
+    opacity: 0; } }
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 100px 50px;
+    opacity: 0; } }
+/* line 600, style.scss */
+.input__label-content--minoru {
+  padding: 0.75em 0.15em; }
+
+/* Yoko */
+/* line 605, style.scss */
+.input__field--yoko {
+  z-index: 10;
+  width: 100%;
+  background: transparent;
+  color: #f5f5f5;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+/* line 615, style.scss */
+.input__label--yoko {
+  position: relative;
+  width: 100%;
+  color: #c0392b;
+  text-align: left; }
+
+/* line 622, style.scss */
+.input__label--yoko::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #c0392b;
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+/* line 638, style.scss */
+.input__label--yoko::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.33em;
+  background: #c0392b;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+/* line 652, style.scss */
+.input__label-content--yoko {
+  padding: 0.75em 0; }
+
+/* line 656, style.scss */
+.input__field--yoko:focus,
+.input--filled .input__field--yoko {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+
+/* line 663, style.scss */
+.input__field--yoko:focus + .input__label--yoko::before,
+.input--filled .input__label--yoko::before {
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 0deg); }
+
+/* line 669, style.scss */
+.input__field--yoko:focus + .input__label--yoko,
+.input--filled .input__label--yoko {
+  pointer-events: none; }
+
+/* line 674, style.scss */
+.input__field--yoko:focus + .input__label--yoko::after,
+.input--filled .input__label--yoko::after {
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, -90deg); }
 
 /*# sourceMappingURL=style.css.map */
