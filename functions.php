@@ -91,20 +91,7 @@ add_filter( 'excerpt_more','new_excerpt_more');
 add_image_size('single-post',512,336);
 
 //THEME SETTINGS PAGE
-function setup_theme_admin_menus() {
-    add_menu_page('Theme settings', 'Example theme', 'manage_options', 
-        'tut_theme_settings', 'theme_settings_page');
-         
-    add_submenu_page('tut_theme_settings', 
-        'Front Page Elements', 'Front Page', 'manage_options', 
-        'tut_theme_settings', 'theme_front_page_settings'); 
-}
- 
-function theme_settings_page() {
- 
-}
- 
- add_action("admin_menu", "setup_theme_admin_menus");
+
 //THEME SUPPORTS
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
