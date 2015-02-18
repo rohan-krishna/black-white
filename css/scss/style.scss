@@ -9,6 +9,7 @@ $logo-font: 'Montserrat', sans-serif;
 $para-color: #333;
 $box-border : #e5e6e9 #dfe0e4 #d0d1d5;
 $primary-a-color: #237dac;
+$tech-font: 'Lato',Arial,sans-serif;
 
 @font-face {
 	font-family: 'Lobster';
@@ -136,7 +137,6 @@ a:active {
 	text-decoration: none;
 }
 h1,h2,h3,h4,h5,h6 {
-	color : $header-color;
 	font-family : $header-font;
 	margin: 0;
 }
@@ -494,7 +494,92 @@ figure.twitter-logo {
 .cs-logo-wrapper p {
 	margin: 0 0 0 0;
 }
+.cmsp-bg {
+	width: 100%;
+	display: block;
+	height: 100% !important;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow-y: hidden;
+	z-index: -1;
+	background: url('../../images/5e96bf62b9b2c18fdb65564b4a18fd1f.jpg') no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.cmsp-logo {
+	max-width: 50%;
+	position: fixed;
+	top: 50%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+.cmsp-logo h1 {
+	color: #fff;
+	font-size: 3.8em;
+	-webkit-font-smoothing: antialiased;
+	font-family: $tech-font;
+	font-weight: 300;
+	margin-bottom: 0;
+	cursor: pointer;
+	-webkit-transition: text-shadow linear 300ms;
+	text-align: center;
+}
+.cmsp-logo h1:hover {
+	text-shadow: 3px 1px 3px #000;
+	-webkit-transition: text-shadow linear 300ms;
+}
+.cmsp-logo p {
+	margin-top: 0;
+	color: #fff;
+	text-align: center;
+}
+.cmsp-contact {
 
+}
+.cmsp-contact input[type="text"],input[type="email"] {
+	border: 0;
+	color: #fff;
+	float: left;
+	margin: 2%;
+	border: 2px solid #fff;
+	border-radius: 24px;
+	background: transparent;
+	padding: 12px;
+	font-size: 18px;
+	font-family: $tech-font;
+	transition: all 0.3s linear;
+}
+.cmsp-contact input[type="text"]:focus,input[type="email"]:focus {
+	background: #fff;
+	color: #333;
+}
+.cmsp-contact input[type="text"]:hover,input[type="email"]:hover {
+	border-color: #26a65b;
+}
+.cmsp-contact input[type="submit"] {
+	clear: both;
+	float: left;
+	margin: 0 auto;
+	border: 2px solid #fff;
+	font-family: $tech-font;
+	background: transparent;
+	border-radius: 1.52em;
+	padding: 0.3em 1.52em;
+	position: relative;
+	left: 40%;
+	transition: all 0.3s linear;
+}
+.cmsp-contact input[type="submit"]:hover {
+	background: #fff;
+	color: #333;
+	border-color: #fff;
+	cursor: pointer;
+}
+.wpcf7-response-output {
+	border: 2px solid #fff;
+}
 /*------- Input Tweaks -------*/
 .input__field {
 	position: relative;
