@@ -577,6 +577,10 @@ figure.twitter-logo {
 	border-color: #fff;
 	cursor: pointer;
 }
+.cmsp-contact input[type="submit"]:active {
+	position: relative;
+	top: 2px;
+}
 .wpcf7-response-output {
 	border: 2px solid #fff;
 }

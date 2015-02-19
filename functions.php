@@ -2,7 +2,6 @@
 
 define ("THEME_DIR",get_template_directory_uri());
 //Remove Generator Tag
-remove_action('wp_head','wp_generator');
 
 //ENQUEUE STYLES
 	function enqueue_styles() {

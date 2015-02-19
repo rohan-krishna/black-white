@@ -38,7 +38,7 @@
 	<div class="row">
 		<div class="twitter-feed col-md-8 col-lg-8 hidden-xs">
 			<figure class="twitter-logo">
-
+				
 			</figure>
 		</div>
 	</div>
